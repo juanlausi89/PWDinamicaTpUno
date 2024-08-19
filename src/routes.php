@@ -2,6 +2,7 @@
 
 use Juanpablolausi\ProgramacionWebDinamicaTpUno\ejercicio1\controllers\VerNumero;
 use Juanpablolausi\ProgramacionWebDinamicaTpUno\ejercicio2\controllers\IngresarHoras;
+use Juanpablolausi\ProgramacionWebDinamicaTpUno\ejercicio3\controllers\DatosPersonales;
 
 $router = new \Bramus\Router\Router();
 session_start();
@@ -32,6 +33,18 @@ $router->get('/ejercicio2',function(){
 $router->get('/enviarHoras',function(){
     $controller = new IngresarHoras;
     $controller->calcular($_POST);
+});
+
+//RUTAS EJERCICIO 3
+
+$router->get('/ejercicio3',function(){
+    $controller = new DatosPersonales;
+    $controller->render('ejercicio3','form');
+});
+
+$router->post('/enviarDatosPersonales',function(){
+    $controller = new DatosPersonales;
+    $controller->mostrarDatos($_POST);
 });
 
 $router->run();
