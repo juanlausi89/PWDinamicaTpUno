@@ -1,0 +1,17 @@
+{
+    "name": "juanpablolausi/programacion-web-dinamica-tp-uno",
+    "autoload": {
+        "psr-4": {
+            "Juanpablolausi\\ProgramacionWebDinamicaTpUno\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Juan Pablo Lausi",
+            "email": "juanpablo_lausi@hotmail.com.ar"
+        }
+    ],
+    "require": {
+        "bramus/router": "^1.6"
+    }
+}
