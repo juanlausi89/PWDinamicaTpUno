@@ -1,6 +1,7 @@
 <?php
 
 use Juanpablolausi\ProgramacionWebDinamicaTpUno\ejercicio1\controllers\VerNumero;
+use Juanpablolausi\ProgramacionWebDinamicaTpUno\ejercicio2\controllers\IngresarHoras;
 
 $router = new \Bramus\Router\Router();
 session_start();
@@ -22,5 +23,15 @@ $router->post('/enviarNumero',function(){
 });
 
 //RUTAS EJERCICIO 2
+
+$router->get('/ejercicio2',function(){
+    $controller = new IngresarHoras;
+    $controller->render('ejercicio2','form');
+});
+
+$router->get('/enviarHoras',function(){
+    $controller = new IngresarHoras;
+    $controller->calcular($_POST);
+});
 
 $router->run();
