@@ -7,6 +7,7 @@ use Juanpablolausi\ProgramacionWebDinamicaTpUno\ejercicio4\controllers\DatosPers
 use Juanpablolausi\ProgramacionWebDinamicaTpUno\ejercicio5\controllers\DatosUsuario;
 use Juanpablolausi\ProgramacionWebDinamicaTpUno\ejercicio6\controllers\DatosAlumno;
 use Juanpablolausi\ProgramacionWebDinamicaTpUno\ejercicio7\controllers\Calcular;
+use Juanpablolausi\ProgramacionWebDinamicaTpUno\ejercicio8\controllers\CalculoTarifa;
 
 $router = new \Bramus\Router\Router();
 session_start();
@@ -96,6 +97,18 @@ $router->get('/ejercicio7',function(){
 
 $router->post('/calcularOperacionMatematica',function(){
     $controller = new Calcular;
+    $controller->calcular($_POST);
+});
+
+//RUTAS EJERCICIO 8
+
+$router->get('/ejercicio8',function(){
+    $controller = new CalculoTarifa;
+    $controller->render('ejercicio8','form');
+});
+
+$router->post('/calcularValorEntradaCine',function(){
+    $controller = new CalculoTarifa;
     $controller->calcular($_POST);
 });
 
