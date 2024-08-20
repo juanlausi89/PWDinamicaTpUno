@@ -5,6 +5,7 @@ use Juanpablolausi\ProgramacionWebDinamicaTpUno\ejercicio2\controllers\IngresarH
 use Juanpablolausi\ProgramacionWebDinamicaTpUno\ejercicio3\controllers\DatosPersonales;
 use Juanpablolausi\ProgramacionWebDinamicaTpUno\ejercicio4\controllers\DatosPersona;
 use Juanpablolausi\ProgramacionWebDinamicaTpUno\ejercicio5\controllers\DatosUsuario;
+use Juanpablolausi\ProgramacionWebDinamicaTpUno\ejercicio6\controllers\DatosAlumno;
 
 $router = new \Bramus\Router\Router();
 session_start();
@@ -70,6 +71,18 @@ $router->get('/ejercicio5',function(){
 
 $router->get('/enviarDatosUsuario',function(){
     $controller = new DatosUsuario;
+    $controller->mostrarDatos($_GET);
+});
+
+//RUTAS EJERCICIO 6
+
+$router->get('/ejercicio6',function(){
+    $controller = new DatosAlumno;
+    $controller->render('ejercicio6','form');
+});
+
+$router->get('/enviarDatosAlumno',function(){
+    $controller = new DatosAlumno;
     $controller->mostrarDatos($_GET);
 });
 
