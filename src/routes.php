@@ -4,6 +4,7 @@ use Juanpablolausi\ProgramacionWebDinamicaTpUno\ejercicio1\controllers\VerNumero
 use Juanpablolausi\ProgramacionWebDinamicaTpUno\ejercicio2\controllers\IngresarHoras;
 use Juanpablolausi\ProgramacionWebDinamicaTpUno\ejercicio3\controllers\DatosPersonales;
 use Juanpablolausi\ProgramacionWebDinamicaTpUno\ejercicio4\controllers\DatosPersona;
+use Juanpablolausi\ProgramacionWebDinamicaTpUno\ejercicio5\controllers\DatosUsuario;
 
 $router = new \Bramus\Router\Router();
 session_start();
@@ -57,6 +58,18 @@ $router->get('/ejercicio4',function(){
 
 $router->get('/enviarDatosPersonas',function(){
     $controller = new DatosPersona;
+    $controller->mostrarDatos($_GET);
+});
+
+//RUTAS EJERCICIO 5
+
+$router->get('/ejercicio5',function(){
+    $controller = new DatosUsuario;
+    $controller->render('ejercicio5','form');
+});
+
+$router->get('/enviarDatosUsuario',function(){
+    $controller = new DatosUsuario;
     $controller->mostrarDatos($_GET);
 });
 
