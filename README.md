@@ -40,3 +40,9 @@ composer install
 ### 5. Ve a tu navegador de preferencia e ingresa a la siguiente url
 
 localhost:80/PWDinamicaTpUno
+
+### 6. Verificar el puerto para constante de importacion de archivos css y javascript
+
+Verificar en el archivo src/config/config.php la linea define('URL', 'http://localhost:80/PWDinamicaTpUno/')
+Esta constante URL se utiliza en las vistas de php para importar archivos css y javascipt. Si no coincide
+cambiarla.
