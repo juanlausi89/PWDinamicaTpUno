@@ -39,4 +39,4 @@ composer install
 
 ### 5. Ve a tu navegador de preferencia e ingresa a la siguiente url
 
-localhost:8080/PWDinamicaTpUno
+localhost:80/PWDinamicaTpUno
