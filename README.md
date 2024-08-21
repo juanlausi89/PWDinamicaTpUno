@@ -1,6 +1,6 @@
 # PHP Trabajo Práctico Nº 1
 
-¡Bienvenido a **PHP Trabajo Práctico Nº 1**! Este proyecto es una aplicación web desarrollada en PHP. Para ejecutarla en tu entorno local, necesitarás Composer y XAMPP.
+¡Bienvenido a **PHP Trabajo Práctico Nº 1**! Este proyecto es una aplicación web desarrollada en PHP. Para ejecutarla en tu entorno local, necesitarás [Composer](https://getcomposer.org/) y XAMPP.
 
 ## Requisitos
 
@@ -14,7 +14,7 @@ Sigue estos pasos para configurar y ejecutar la aplicación en tu entorno local:
 
 ### 1. Inicia XAMPP
 
-### 2. Dirijete a la carpeta htdocs de XAMPP
+### 2. Dirígete a la carpeta htdocs de XAMPP
 
 Por ejemplo, en windows C:\xampp\htdocs
 
@@ -37,6 +37,6 @@ composer install
 
 ```
 
-### 5. Ve a tu navegador de preferencia y dirijete a la siguiente url
+### 5. Ve a tu navegador de preferencia e ingresa a la siguiente url
 
 localhost:8080/PWDinamicaTpUno
