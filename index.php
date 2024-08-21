@@ -10,5 +10,8 @@ ini_set('log_errors', TRUE); // Error/Exception file logging engine.
 ini_set("error_log", "/opt/lampp/htdocs/programacionWebDinamicaTpUno/php-error.log");
 error_log( "Hello, errors!" );
 
+require_once 'src/config/config.php';
+
 require 'vendor/autoload.php';
 require 'src/routes.php';
+
