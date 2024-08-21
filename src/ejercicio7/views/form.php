@@ -28,5 +28,8 @@
             <button type="submit" class="btn btn-primary mt-3">Enviar</button>
         </form>     
     </div>
+    <div class="mb-3">
+        <a href="menu" class="link-primary">Volver menú</a>
+    </div>
 </body>
 </html>

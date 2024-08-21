@@ -35,5 +35,8 @@
             <button type="submit" class="btn btn-primary">Enviar</button>
         </form>     
     </div>
+    <div class="mb-3">
+        <a href="menu" class="link-primary">Volver menú</a>
+    </div>
 </body>
 </html>

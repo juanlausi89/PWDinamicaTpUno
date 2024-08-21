@@ -8,12 +8,19 @@ use Juanpablolausi\ProgramacionWebDinamicaTpUno\ejercicio5\controllers\DatosUsua
 use Juanpablolausi\ProgramacionWebDinamicaTpUno\ejercicio6\controllers\DatosAlumno;
 use Juanpablolausi\ProgramacionWebDinamicaTpUno\ejercicio7\controllers\Calcular;
 use Juanpablolausi\ProgramacionWebDinamicaTpUno\ejercicio8\controllers\CalculoTarifa;
+use Juanpablolausi\ProgramacionWebDinamicaTpUno\lib\Controller;
 
 $router = new \Bramus\Router\Router();
 session_start();
 
 $router->get('/',function(){
-    echo "inicio";
+    $controller = new Controller;
+    $controller->render('menu','menu');
+});
+
+$router->get('/menu',function(){
+    $controller = new Controller;
+    $controller->render('menu','menu');
 });
 
 //RUTAS EJERCICIO 1

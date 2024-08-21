@@ -28,5 +28,8 @@
             <strong>Valor de entrada: <?php echo $this->d['resp']; ?></strong>
         </div>     
     </div>
+    <div class="mb-3">
+        <a href="menu" class="link-primary">Volver menú</a>
+    </div>
 </body>
 </html>
