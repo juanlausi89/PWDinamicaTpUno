@@ -21,15 +21,21 @@ Por ejemplo, en windows C:\xampp\htdocs
 ### 3. Clonar el Repositorio en la carpeta htdocs
 
 ```bash
-git clone git@github.com:juanlausi89/PWDinamicaTpUno.git```
+git clone git@github.com:juanlausi89/PWDinamicaTpUno.git 
+
+```
 
 ### 4. Instalar Dependencias
 
 ```bash
-cd PWDinamicaTpUno```
+cd PWDinamicaTpUno
+
+```
 
 ```bash
-composer install```
+composer install
+
+```
 
 ### 5. Ve a tu navegador de preferencia y dirijete a la siguiente url
 
