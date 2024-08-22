@@ -112,6 +112,21 @@
                 c) Aplicar Bootstrap.
                 </p>
             </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="tp2Ejercicio4">TP2 Ejercicio 4</a>
+                <p>
+                Diseñar un formulario que permita cargar las películas de la empresa Cinem@s. La lista géneros
+                tiene los siguientes datos: Comedia, Drama, Terror, Románticas, Suspenso, Otras.
+                Aplicar Bootstrap y validar los siguiente:
+                - El año debe ser un campo que debe permitir ingresar como máximo 4 caracteres y solo
+                aceptar números.
+                - El campo duración debe permitir un máximo de 3 números.
+                - Todos los datos son obligatorios
+                - Al hacer click en el botón “Enviar”, se deberán mostrar todos los datos ingresados en el
+                formulario.
+                - El botón “Borrar” debe limpiar el formulario.
+                </p>
+            </li>
         </ul>
     </div>
     

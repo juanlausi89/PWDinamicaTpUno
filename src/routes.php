@@ -10,6 +10,7 @@ use Juanpablolausi\ProgramacionWebDinamicaTpUno\ejercicio7\controllers\Calcular;
 use Juanpablolausi\ProgramacionWebDinamicaTpUno\ejercicio8\controllers\CalculoTarifa;
 use Juanpablolausi\ProgramacionWebDinamicaTpUno\lib\Controller;
 use Juanpablolausi\ProgramacionWebDinamicaTpUno\tp2Ejercicio3\controllers\VerificarPass;
+use Juanpablolausi\ProgramacionWebDinamicaTpUno\tp2Ejercicio4\controllers\CargarPeliculas;
 
 $router = new \Bramus\Router\Router();
 session_start();
@@ -130,6 +131,18 @@ $router->get('/tp2Ejercicio3',function(){
 $router->post('/login',function(){
     $controller = new VerificarPass;
     $controller->login($_POST);
+});
+
+//RUTAS TP2-EJERCICIO 4
+
+$router->get('/tp2Ejercicio4',function(){
+    $controller = new CargarPeliculas;
+    $controller->render('tp2Ejercicio4','form');
+});
+
+$router->post('/savePeliculas',function(){
+    $controller = new CargarPeliculas;
+    $controller->save($_POST);
 });
 
 
