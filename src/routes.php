@@ -9,6 +9,7 @@ use Juanpablolausi\ProgramacionWebDinamicaTpUno\ejercicio6\controllers\DatosAlum
 use Juanpablolausi\ProgramacionWebDinamicaTpUno\ejercicio7\controllers\Calcular;
 use Juanpablolausi\ProgramacionWebDinamicaTpUno\ejercicio8\controllers\CalculoTarifa;
 use Juanpablolausi\ProgramacionWebDinamicaTpUno\lib\Controller;
+use Juanpablolausi\ProgramacionWebDinamicaTpUno\tp2Ejercicio3\controllers\VerificarPass;
 
 $router = new \Bramus\Router\Router();
 session_start();
@@ -23,7 +24,7 @@ $router->get('/menu',function(){
     $controller->render('menu','menu');
 });
 
-//RUTAS EJERCICIO 1
+//RUTAS TP1-EJERCICIO 1
 
 $router->get('/ejercicio1',function(){
     $controller = new VerNumero;
@@ -35,7 +36,7 @@ $router->post('/enviarNumero',function(){
     $controller->calcular($_POST);
 });
 
-//RUTAS EJERCICIO 2
+//RUTAS TP1-EJERCICIO 2
 
 $router->get('/ejercicio2',function(){
     $controller = new IngresarHoras;
@@ -47,7 +48,7 @@ $router->get('/enviarHoras',function(){
     $controller->calcular($_GET);
 });
 
-//RUTAS EJERCICIO 3
+//RUTAS TP1-EJERCICIO 3
 
 $router->get('/ejercicio3',function(){
     $controller = new DatosPersonales;
@@ -59,7 +60,7 @@ $router->post('/enviarDatosPersonales',function(){
     $controller->mostrarDatos($_POST);
 });
 
-//RUTAS EJERCICIO 4
+//RUTAS TP1-EJERCICIO 4
 
 $router->get('/ejercicio4',function(){
     $controller = new DatosPersona;
@@ -71,7 +72,7 @@ $router->get('/enviarDatosPersonas',function(){
     $controller->mostrarDatos($_GET);
 });
 
-//RUTAS EJERCICIO 5
+//RUTAS TP1-EJERCICIO 5
 
 $router->get('/ejercicio5',function(){
     $controller = new DatosUsuario;
@@ -83,7 +84,7 @@ $router->get('/enviarDatosUsuario',function(){
     $controller->mostrarDatos($_GET);
 });
 
-//RUTAS EJERCICIO 6
+//RUTAS TP1-EJERCICIO 6
 
 $router->get('/ejercicio6',function(){
     $controller = new DatosAlumno;
@@ -95,7 +96,7 @@ $router->get('/enviarDatosAlumno',function(){
     $controller->mostrarDatos($_GET);
 });
 
-//RUTAS EJERCICIO 7
+//RUTAS TP1-EJERCICIO 7
 
 $router->get('/ejercicio7',function(){
     $controller = new Calcular;
@@ -107,7 +108,7 @@ $router->post('/calcularOperacionMatematica',function(){
     $controller->calcular($_POST);
 });
 
-//RUTAS EJERCICIO 8
+//RUTAS TP1-EJERCICIO 8
 
 $router->get('/ejercicio8',function(){
     $controller = new CalculoTarifa;
@@ -118,5 +119,18 @@ $router->post('/calcularValorEntradaCine',function(){
     $controller = new CalculoTarifa;
     $controller->calcular($_POST);
 });
+
+//RUTAS TP2-EJERCICIO 3
+
+$router->get('/tp2Ejercicio3',function(){
+    $controller = new VerificarPass;
+    $controller->render('tp2Ejercicio3','form');
+});
+
+$router->post('/login',function(){
+    $controller = new VerificarPass;
+    $controller->login($_POST);
+});
+
 
 $router->run();
