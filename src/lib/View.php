@@ -4,6 +4,7 @@ namespace Juanpablolausi\ProgramacionWebDinamicaTpUno\lib;
 
 class View{
     
+    private $d;
 
     function __construct(){
         
