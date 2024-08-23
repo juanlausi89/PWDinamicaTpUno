@@ -3,6 +3,7 @@
 namespace Juanpablolausi\ProgramacionWebDinamicaTpUno\tp2Ejercicio4\controllers;
 
 use Juanpablolausi\ProgramacionWebDinamicaTpUno\lib\Controller;
+use Juanpablolausi\ProgramacionWebDinamicaTpUno\lib\UtilImages;
 use Juanpablolausi\ProgramacionWebDinamicaTpUno\tp2Ejercicio4\models\Pelicula;
 
 class CargarPeliculas extends Controller{
@@ -41,6 +42,9 @@ class CargarPeliculas extends Controller{
             $guionOk && $produccionOk && $anioOk && 
             $nacionalidadOk && $generoOk && $duracionOk && 
             $restriccionEdadOk && $sinopsisOk){
+
+            $archivo = $this->file('archivo');
+            $url = UtilImages::storeFile($archivo);    
             
             $pelicula = new Pelicula(
                 $requestTitulo,
@@ -54,6 +58,7 @@ class CargarPeliculas extends Controller{
                 $requestDuracion,
                 $requestRestriccionEdad,
                 $requestSinopsis,
+                $url
             );
             $resp = $pelicula->getPelicula();
             if($resp){

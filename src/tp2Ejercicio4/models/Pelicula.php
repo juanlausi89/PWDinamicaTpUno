@@ -15,6 +15,7 @@ class Pelicula{
     private int $duracion;
     private string $restriccionEdad;
     private string $sinopsis;
+    private string $url;
 
 
     public function __construct(
@@ -28,7 +29,8 @@ class Pelicula{
         $genero,
         $duracion,
         $restriccionEdad,
-        $sinopsis
+        $sinopsis,
+        $url
         )
     {
         $this->titulo = $titulo;
@@ -42,6 +44,7 @@ class Pelicula{
         $this->duracion = $duracion;
         $this->restriccionEdad = $restriccionEdad;
         $this->sinopsis= $sinopsis;
+        $this->url= $url;
     }
     
 
@@ -57,7 +60,8 @@ class Pelicula{
             "genero" => $this->genero,
             "duracion" => $this->duracion,
             "restriccionEdad" => $this->restriccionEdad,
-            "sinopsis" => $this->sinopsis
+            "sinopsis" => $this->sinopsis,
+            "url" => $this->url
           ];
         return $peliculaArray;
     }

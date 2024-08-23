@@ -34,7 +34,7 @@
 <body>
     <div class="container">
         <h5 class="mt-3 mb-3">Cinem@s</h5>
-        <form action="savePeliculas" method="POST" data-parsley-validate="">
+        <form action="savePeliculas" method="POST" data-parsley-validate="" enctype="multipart/form-data">
             
           <div class="row">
             <div class="form-group mb-3 col-md-6">
@@ -126,8 +126,12 @@
               <label for="sinopsis">Sinopsis</label>
               <textarea class="form-control" id="sinopsis" name="sinopsis" rows="3" required></textarea>
             </div>
-            
-            <div class="mb-3">
+
+            <div class="form-group mt-3">
+              <input type="file" name="archivo" accept="image/png, image/jpeg">
+            </div>
+
+            <div class="mb-3 mt-3">
                 <button type="submit"  class="btn btn-success mt-2">Enviar</button>
                 <button type="reset"  class="btn  mt-2">Borrar</button>
             </div>
@@ -149,6 +153,7 @@
             <li><strong>Restricción Edad: </strong><?php echo $this->d['resp']['restriccionEdad']; ?></li>
             <li><strong>Sinopsis: </strong><?php echo $this->d['resp']['sinopsis']; ?></li>
           </ul>
+          <img src="<?php echo constant('URL') . 'public/archivos/' . htmlspecialchars($this->d['resp']['url'], ENT_QUOTES, 'UTF-8'); ?>" alt="imagen">
         </div> 
         <?php endif; ?>   
     </div>

@@ -11,6 +11,8 @@ use Juanpablolausi\ProgramacionWebDinamicaTpUno\ejercicio8\controllers\CalculoTa
 use Juanpablolausi\ProgramacionWebDinamicaTpUno\lib\Controller;
 use Juanpablolausi\ProgramacionWebDinamicaTpUno\tp2Ejercicio3\controllers\VerificarPass;
 use Juanpablolausi\ProgramacionWebDinamicaTpUno\tp2Ejercicio4\controllers\CargarPeliculas;
+use Juanpablolausi\ProgramacionWebDinamicaTpUno\tp3Ejercicio1\controllers\SubirArchivo;
+use Juanpablolausi\ProgramacionWebDinamicaTpUno\tp3Ejercicio2\controllers\SubirArchivoTxt;
 
 $router = new \Bramus\Router\Router();
 session_start();
@@ -143,6 +145,31 @@ $router->get('/tp2Ejercicio4',function(){
 $router->post('/savePeliculas',function(){
     $controller = new CargarPeliculas;
     $controller->save($_POST);
+});
+
+
+//RUTAS TP3-EJERCICIO 1
+
+$router->get('/tp3Ejercicio1',function(){
+    $controller = new SubirArchivo;
+    $controller->render('tp3Ejercicio1','form');
+});
+
+$router->post('/subirArchivo',function(){
+    $controller = new SubirArchivo;
+    $controller->store($_POST);
+});
+
+//RUTAS TP3-EJERCICIO 2
+
+$router->get('/tp3Ejercicio2',function(){
+    $controller = new SubirArchivoTxt;
+    $controller->render('tp3Ejercicio2','form');
+});
+
+$router->post('/subirArchivoTxt',function(){
+    $controller = new SubirArchivoTxt;
+    $controller->store($_POST);
 });
 
 

@@ -127,6 +127,32 @@
                 - El botón “Borrar” debe limpiar el formulario.
                 </p>
             </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="tp3Ejercicio1">TP3 Ejercicio 1</a>
+                <p>
+                Crear un formulario HTML que permita subir un archivo. En el servidor se deberá
+                controlar, antes de guardar el archivo, que los tipos validos son .doc o pdf y además el tamaño
+                máximo permitido es de 2mb. En caso que se cumplan las condiciones mostrar un link al archivo
+                cargado, en caso contrario mostrar un mensaje indicando el problema.
+                </p>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="tp3Ejercicio2">TP3 Ejercicio 2</a>
+                <p>
+                Crear un formulario que permita subir un archivo. En el servidor se deberá controlar
+                que el tipo esperado sea txt (texto plano), si es correcto deberá abrir el archivo y mostrar su
+                contenido en un textarea
+                </p>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="tp2Ejercicio4">TP3 Ejercicio 3</a>
+                <p>
+                  Agregue al formulario creado en el ejercicio 10 del práctico 2 un input file que les
+                  permita adjuntar la imagen de película que se está cargando. Cuando se envía el formulario se
+                  deberá guardar la imagen y luego mostrarla junto con la información cargada en el formulario.
+                </p>
+            </li>                       
+
         </ul>
     </div>
     
